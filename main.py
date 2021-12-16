@@ -1,20 +1,16 @@
-import typer
+#!/usr/local/bin/python3
 from PIL import Image, ImageOps
-from typing import Optional
+import sys
 
 def main():
-    path = "/Users/agiagoulas/Desktop/L1003917.jpg"
-    outpath = "/Users/agiagoulas/Desktop/L1003917-out.jpg"
-    # path = "/Users/agiagoulas/Desktop/L1003904.jpg"
-    # outpath = "/Users/agiagoulas/Desktop/L1003904-out.jpg"
-    boder_colour = "#fff" # takes string and # colour codes
-    min_border_percent = 5 # in decimal percent
+    path = sys.argv[1]
+    outpath = path
+    boder_colour = "white" # takes string and # colour codes
+    min_border_percent = 5
     min_border_percent = min_border_percent / 100
 
     img = Image.open(path)
     width, height = img.size
-    print(img.size)
-    
 
     if width >= height:
         min_border = int(height * min_border_percent) 
@@ -32,8 +28,7 @@ def main():
     imgWithBorder = ImageOps.expand(img, border = border, fill = boder_colour)
     imgWithBorder.save(outpath) 
 
-  
-    print(imgWithBorder.size)
+
 
 
 
@@ -42,6 +37,6 @@ def main():
 
 if __name__ == "__main__":
     
-    typer.run(main)
+    main()
 
 
