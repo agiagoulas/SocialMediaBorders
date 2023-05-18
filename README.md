@@ -3,7 +3,7 @@
 Adding colored borders to pictures for social media to bring them to a 1:1 format.
 
 ```
-usage: social_media_borders.py [-h] [-c COLOR] [-bp BORDERPERCENTAGE] [-o | --keepOriginal | --no-keepOriginal] path
+usage: socialmediaborders [-h] [-c COLOR] [-bp BORDERPERCENTAGE] [-k | --keepOriginal | --no-keepOriginal] path
 
 Adding colored borders to pictures for social media to bring them to a 1:1 format.
 

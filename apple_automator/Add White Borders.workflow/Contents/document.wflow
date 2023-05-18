@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>tell application "Finder"	set temp to selection as alias list	repeat with t in temp		set the_item to t		set the_result to POSIX path of the_item		set run_command to "python3 /Users/agiagoulas/Documents/SocialMediaBorders/social_media_borders.py '" &amp; the_result &amp; "'"		do shell script run_command	end repeatend tell</string>
+					<string>tell application "Finder"	set temp to selection as alias list	repeat with t in temp		set the_item to t		set the_result to POSIX path of the_item		set run_command to "python3 -m socialmediaborders '" &amp; the_result &amp; "'"		do shell script run_command	end repeatend tell</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -105,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>458.000000:526.000000</string>
+				<string>334.500000:368.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
